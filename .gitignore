@@ -1,0 +1,11 @@
+.env.*
+airbyte2terraform
+data
+__pycache__
+*.tfvars
+.terraform*
+terraform.tfstate
+terra_gen
+test_code.py
+logs
+.venv

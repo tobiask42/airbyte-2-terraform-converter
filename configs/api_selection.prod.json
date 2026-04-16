@@ -1,0 +1,13 @@
+{
+    "tokens" : {
+        "airbyte1":"airbyte1_token"
+    },
+    "data":[
+        "airbyte1_sources",
+        "airbyte1_destinations",
+        "airbyte1_connections",
+        "airbyte2_sources",
+        "airbyte2_destinations",
+        "airbyte2_connections"
+    ]
+}

@@ -1,0 +1,6 @@
+{
+    "env_file": ".env.prod",
+    "api_config": "api_config.prod.yml",
+    "api_selection": "api_selection.prod.json",
+    "env_prefix": "AB2TF_PROD_"
+}

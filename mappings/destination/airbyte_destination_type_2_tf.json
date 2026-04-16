@@ -1,0 +1,5 @@
+{
+    "postgres": "airbyte_destination_postgres",
+    "snowflake" : "airbyte_destination_snowflake",
+    "azure-blob-storage": "airbyte_destination_azure_blob_storage"
+}

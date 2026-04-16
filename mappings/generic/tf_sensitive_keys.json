@@ -1,0 +1,13 @@
+{
+    "username": "__PLACEHOLDER_USER__",
+    "password": "__PLACEHOLDER_PASSWORD__",
+    "client_id": "__PLACEHOLDER_CLIENT_ID__",
+    "client_secret": "__PLACEHOLDER_CLIENT_SECRET__",
+    "api_key": "__PLACEHOLDER_API_KEY__",
+    "sas_token": "__PLACEHOLDER_SAS_TOKEN__",
+    "token": "__PLACEHOLDER_TOKEN__",
+    "credentials_json": "__PLACEHOLDER_CREDENTIALS_JSON__",
+    "api_token": "__PLACEHOLDER_API_TOKEN__",
+    "access_key": "__PLACEHOLDER_ACCESS_KEY__",
+    "secret_key": "__PLACEHOLDER_SECRET_KEY__"
+}

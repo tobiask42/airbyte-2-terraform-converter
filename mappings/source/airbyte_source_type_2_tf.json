@@ -1,0 +1,12 @@
+{
+  "mysql": "airbyte_source_mysql",
+  "jira": "airbyte_source_jira",
+  "postgres": "airbyte_source_postgres",
+  "e2e-test": "airbyte_source_e2e_test",
+  "snowflake": "airbyte_source_snowflake",
+  "amazon-sqs": "airbyte_source_amazon_sqs",
+  "file": "airbyte_source_file",
+  "sftp-bulk": "airbyte_source_sftp_bulk",
+  "pipedrive": "airbyte_source_pipedrive",
+  "google-analytics-data-api": "airbyte_source_google_analytics_data_api"
+}

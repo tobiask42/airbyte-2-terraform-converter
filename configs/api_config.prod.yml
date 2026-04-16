@@ -1,0 +1,63 @@
+- name: airbyte1_sources
+  endpoint: ${ENDPOINT_AB1}sources
+  next_key: next
+  items_key: data
+  filename: sources_ab1
+  headers:
+    accept: application/json
+    content_type: application/json
+
+
+- name: airbyte1_destinations
+  endpoint: ${ENDPOINT_AB1}destinations
+  next_key: next
+  items_key: data
+  filename: destinations_ab1
+  headers:
+    accept: application/json
+    content_type: application/json
+
+
+- name: airbyte1_connections
+  endpoint: ${ENDPOINT_AB1}connections
+  next_key: next
+  items_key: data
+  filename: connections_ab1
+  headers:
+    accept: application/json
+    content_type: application/json
+
+
+- name: airbyte2_sources
+  endpoint: ${ENDPOINT_AB2}sources
+  next_key: next
+  items_key: data
+  filename: sources_ab2
+  headers:
+    accept: application/json
+    content_type: application/json
+
+- name: airbyte2_destinations
+  endpoint: ${ENDPOINT_AB2}destinations
+  next_key: next
+  items_key: data
+  filename: destinations_ab2
+  headers:
+    accept: application/json
+    content_type: application/json
+
+- name: airbyte2_connections
+  endpoint: ${ENDPOINT_AB2}connections
+  next_key: next
+  items_key: data
+  filename: connections_ab2
+  headers:
+    accept: application/json
+    content_type: application/json
+
+- name: airbyte1_token
+  endpoint: ${ENDPOINT_AB1}applications/token
+  data: '{"client_id": "${CLIENT_ID_AB1}", "client_secret": "${CLIENT_SECRET_AB1}", "grant-type": "client_credentials"}'
+  headers:
+    accept: application/json
+    content_type: application/json
