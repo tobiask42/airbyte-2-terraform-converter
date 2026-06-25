@@ -1,8 +1,8 @@
 from typing import Protocol, TypedDict, NotRequired, Required, Any
 
-class HttpHeaders(TypedDict, total=False):
-    accept: str
-    content_type: str
+class HttpHeaders(TypedDict):
+    accept: Required[str]
+    content_type: Required[str]
     authorization: NotRequired[str]
 
 class ApiConfig(TypedDict):
