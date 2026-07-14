@@ -5,7 +5,7 @@ Tool zur automatisierten Überführung bestehender Airbyte-Konfigurationen in de
 Sources, Destinations und Connections werden direkt aus der Airbyte-API ausgelesen und als reproduzierbare `.tf`-Dateien inklusive Import-Blöcken erzeugt statt sie manuell nachzubauen. So lässt sich eine gewachsene Airbyte-Umgebung unter IaC-Verwaltung bringen.
 ## Hintergrund
 
-Dieses Projekt entstand im beruflichen Kontext. Die Veröffentlichung erfolgt mit Genehmigung. Es wurden keine vertraulichen oder unternehmensspezifischen Informationen übernommen.
+Dieses Projekt entstand im beruflichen Kontext. Die Veröffentlichung erfolgt mit Genehmigung. Es wurden keine vertraulichen oder unternehmensspezifischen Informationen übernommen. Der Code wird ausschließlich zu Demonstrationszwecken bereitgestellt. Eine Lizenz zur Nutzung, Veränderung oder Weiterverbreitung wird nicht erteilt.
 
 ---
 
@@ -202,6 +202,17 @@ Mindestens ein Flag muss angegeben werden.
 - Import-Blöcke für bestehende Ressourcen
 - JSON-Rohdaten
 - Log-Dateien
+---
+
+## Status & bekannte Einschränkungen
+
+Dieses Repository ist bewusst als **Snapshot eines konkreten Entwicklungsstands** veröffentlicht. Inklusive der offenen Kanten. Ziel ist eine ehrliche Momentaufnahme, kein nachträglich glattgezogenes Portfolio-Projekt. Die folgenden Punkte sind bekannt und bewusst nicht mehr nachgebessert:
+
+- **`utils` organisch gewachsen:** Die Hilfsfunktionen vermischen aktuell mehrere Verantwortlichkeiten (HCL-Serialisierung, Namensbildung, Datei-Handling). Eine thematische Auftrennung wäre der nächste sinnvolle Refactoring-Schritt.
+- **Logging ohne einheitliches Schema:** Alle relevanten Schritte werden geloggt, es fehlt jedoch ein durchgängiges Schema und teils der Kontext zum *Warum*. Für den Einsatz in einer Pipeline wäre strukturiertes, maschinenlesbares Logging mit klaren Leveln vorzuziehen.
+- **Altlast `AppSettings.get_var`:** Die Methode wird im aktiven Pfad nicht genutzt (Konfiguration läuft über `bootstrap` und die Prioritätskette) und ist in ihrer aktuellen Form fehlerhaft. Sie gehört bereinigt bzw. entfernt.
+- **Kleinere Inkonsistenzen:** z. B. fehlender Return-Type-Hint bei `generate_terra_conn()`.
+- **Tests bewusst minimal:** Das Tool war als Migrations-/Bootstrapping-Werkzeug konzipiert, nicht als dauerhaft integriertes Produktivsystem. Die Korrektheit des erzeugten Codes wurde über `terraform validate`, `terraform plan` (leerer Plan nach Import = korrekt) und manuelle Stichproben abgesichert. Für einen dauerhaften Betrieb wären Golden-File-Tests der sinnvolle nächste Schritt.
 
 ---
 
